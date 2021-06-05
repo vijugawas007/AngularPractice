@@ -1,0 +1,74 @@
+<section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <h1 class="display-4 py-2 text-truncate">Sign Up Here.</h1>
+                    <div class="px-2">
+                        
+                        <form class="justify-content-center " [formGroup]="form" (ngSubmit)="submit()">
+                            <div class="form-group">
+                                <label for="_firstName">First Name</label>
+                                <input type="text" class="form-control" formControlName="_firstName">
+                                <div *ngIf="formControl._firstName.touched  && formControl._firstName.invalid "
+                                    class="alert alert-danger">
+                                    <div *ngIf="formControl._firstName.errors.required">First Name is Required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" formControlName="_lastName" class="form-control">
+                                <div *ngIf="formControl._lastName.touched && formControl._lastName.invalid"
+                                    class="alert alert-danger">
+                                    <div *ngIf="formControl._lastName.errors.required">Last Name is Required</div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Contact no.</label>
+                                Contact no. : <input type="number" formControlName="_contactNumber"
+                                    class="form-control">
+                                <div *ngIf="formControl._contactNumber.touched && formControl._contactNumber.invalid "
+                                    class="alert alert-danger">
+                                    <div *ngIf="formControl._contactNumber.errors.required">Phone Number is Required
+                                    </div>
+                                    <div *ngIf="formControl._contactNumber.errors.minLength">Phone Number should be 10
+                                        Digits</div>
+                                        <div *ngIf="formControl._contactNumber.errors.maxLength">Phone Number should be 10
+                                            Digits</div>
+                                    <!--<div *ngIf="formControl._contactNumber.errors.maxLength">Phone Number should be 10 Digits</div>-->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                Email Id : <input type="email" formControlName="_emailId" class="form-control"
+                                    name="name">
+                                    <div *ngIf="formControl._emailId.touched && formControl._emailId.invalid "
+                                    class="alert alert-danger">
+                                    <div *ngIf="formControl._emailId.errors.required">Email is Required
+                                    </div>
+                                    <div *ngIf="formControl._emailId.errors.email">Please enter Valid Email
+                                    </div>
+                                    <!--<div *ngIf="formControl._contactNumber.errors.maxLength">Phone Number should be 10 Digits</div>-->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Birth Date</label>
+                                Birthdate : <input type="text" class="form-control" formControlName="_dateOfBirth">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Address</label>
+                                Address : <input type="add" formControlName="_address" class="form-control" name="name">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-danger">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

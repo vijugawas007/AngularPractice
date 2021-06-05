@@ -1,0 +1,19 @@
+#cover-caption {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* only used for background overlay not needed for centering */
+
+form:before {
+    content: '';
+    height: 100%;
+    background-color: cadetblue;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
