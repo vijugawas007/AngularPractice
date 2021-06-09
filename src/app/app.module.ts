@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import {HttpClientModule}  from '@angular/common/http';
+import { ViewusersComponent } from './viewusers/viewusers.component';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     RegisterComponent,
     ContactusComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ViewusersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [UserserviceService],
   bootstrap: [AppComponent]

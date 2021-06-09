@@ -1,0 +1,26 @@
+[
+    {
+        "_firstName": "Rach",
+        "_lastName": "Green",
+        "_contactNumber": 12345,
+        "_email": "rach@gmial.com",
+        "_birthDate": "17-Jan",
+        "_address": "New York"
+    },
+    {
+        "_firstName": "Ross",
+        "_lastName": "Geller",
+        "_contactNumber": 54321,
+        "_email": "ross@gmial.com",
+        "_birthDate": "16-Sep",
+        "_address": "LA"
+    },
+    {
+        "_firstName": "Joe",
+        "_lastName": "Trib",
+        "_contactNumber": 15243,
+        "_email": "joe@gmial.com",
+        "_birthDate": "31-Dec",
+        "_address": "Boston"
+    }
+]

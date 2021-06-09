@@ -1,0 +1,22 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Contact Number</th>
+        <th>Email Id</th>
+        <th>Date of Bnirth</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of _userData'>
+            <td>{{user._firstName}}</td>
+            <td>{{user._lastName}}</td>
+            <td>{{user._contactNumber}}</td>
+            <td>{{user._email}}</td>
+            <td>{{user._birthDate}}</td>
+            <td>{{user._address}}</td>
+        </tr>
+    </tbody>
+</table>

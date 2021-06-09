@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
 
   _user = new User;
   title = 'Reactive Form';
+  _userData=[];
   form = new FormGroup({
     _firstName: new FormControl('', [Validators.required]),
     _lastName: new FormControl('', [Validators.required]),
@@ -40,8 +41,8 @@ export class RegisterComponent implements OnInit {
     this._user._address = _address;
 
     console.log("Hi " + this._user);
-    this._userservice.getUserData(this._user);
   }
+
 
 
 }
