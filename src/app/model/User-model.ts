@@ -1,12 +1,12 @@
-export class User{
+export interface User{
     _firstName : string;
     _lastName : string;
-    _dateOfBirth : Date;
+    _dateOfBirth : string;
     _contactNumber : number;
     _emailId : string;
     _address : string;
     
-    User(_firstName : string, _lastName : string,_dateOfBirth : Date,_contactNumber : number,
+  /*   User(_firstName : string, _lastName : string,_dateOfBirth : string,_contactNumber : number,
         _emailId : string,_address : string){
         this._firstName = _firstName;
         this._lastName=_lastName;
@@ -14,5 +14,5 @@ export class User{
         this._dateOfBirth=_dateOfBirth;
         this._emailId=_emailId;
         this._address=_address;
-    }
+    } */
 }

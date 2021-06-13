@@ -6,6 +6,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ViewusersComponent } from './viewusers/viewusers.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'contactus',component:ContactusComponent},
   {path:'viewuser',component:ViewusersComponent},
+  {path : 'gallery',component:GalleryComponent} ,
   {path:'**',component:PagenotfoundComponent}
 
 ];

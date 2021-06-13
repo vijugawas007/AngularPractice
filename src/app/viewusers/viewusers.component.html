@@ -5,12 +5,20 @@
         <th>Last Name</th>
         <th>Contact Number</th>
         <th>Email Id</th>
-        <th>Date of Bnirth</th>
+        <th>Date of Birth</th>
         <th>Address</th>
     </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let user of _userData'>
+        <tr>
+            <td>{{_userData._firstName}}</td>
+            <td>{{_userData._lastName}}</td>
+            <td>{{_userData._contactNumber}}</td>
+            <td>{{_userData._emailId}}</td>
+            <td>{{_userData._dateOfBirth}}</td>
+            <td>{{_userData._address}}</td> 
+        </tr>
+        <tr *ngFor='let user of _userData1'>
             <td>{{user._firstName}}</td>
             <td>{{user._lastName}}</td>
             <td>{{user._contactNumber}}</td>

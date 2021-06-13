@@ -10,7 +10,7 @@ import { UserserviceService } from '../services/userservice.service';
 })
 export class RegisterComponent implements OnInit {
 
-  _user = new User;
+  _user : User;
   title = 'Reactive Form';
   _userData=[];
   form = new FormGroup({
@@ -29,9 +29,9 @@ export class RegisterComponent implements OnInit {
     return this.form.controls;
   }
   submit() {
-    console.log(this.form.value);
+     this._userservice.setFormData(this.form);
   }
-  public getUserName(_firstName: string, _lastName: string, _dateOfBirth: Date, _contactNumber: number,
+  public getUserName(_firstName: string, _lastName: string, _dateOfBirth: string, _contactNumber: number,
     _emailId: string, _address: string) {
     this._user._firstName = _firstName;
     this._user._lastName = _lastName;
@@ -40,9 +40,7 @@ export class RegisterComponent implements OnInit {
     this._user._emailId = _emailId;
     this._user._address = _address;
 
-    console.log("Hi " + this._user);
   }
-
 
 
 }

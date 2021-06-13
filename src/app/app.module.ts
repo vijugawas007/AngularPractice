@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import {HttpClientModule}  from '@angular/common/http';
 import { ViewusersComponent } from './viewusers/viewusers.component';
-
+import { GalleryComponent } from './gallery/gallery.component'; 
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { ViewusersComponent } from './viewusers/viewusers.component';
     ContactusComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ViewusersComponent
+    ViewusersComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
