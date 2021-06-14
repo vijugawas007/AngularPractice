@@ -17,7 +17,7 @@ export class UserserviceService {
     _firstName :'',
     _lastName : '',
     _address :'',
-    _contactNumber : 0,
+    _contactNumber : null,
     _dateOfBirth : '',
     _emailId : ''
   };
@@ -37,7 +37,7 @@ export class UserserviceService {
     return this._http.get<User[]>(this._url);
   }
 
-  setFormData(_formData : FormGroup){
+  setFormData(_formData : FormGroup){ 
     //this._formData=_formData;
     this._userData._firstName=_formData.controls['_firstName'].value;
     this._userData._lastName =_formData.controls['_lastName'].value;
@@ -53,6 +53,13 @@ export class UserserviceService {
     return this._userData;
   }
 
+  setViewData(_userDataFromView : User){
+    this._userData=_userDataFromView;
+    console.log(this._userData);
+  }
 
+  getViewData(){
+    return this._userData;
+  }
 
 }

@@ -12,7 +12,14 @@ export class RegisterComponent implements OnInit {
 
   _user : User;
   title = 'Reactive Form';
-  _userData=[];
+  _userData : User = {
+    _firstName :'',
+    _lastName : '',
+    _address :'',
+    _contactNumber : null,
+    _dateOfBirth : '',
+    _emailId : ''
+  };
   form = new FormGroup({
     _firstName: new FormControl('', [Validators.required]),
     _lastName: new FormControl('', [Validators.required]),
@@ -24,23 +31,21 @@ export class RegisterComponent implements OnInit {
   constructor(private _userservice: UserserviceService) { }
 
   ngOnInit(): void {
+    this._userData=this._userservice.getViewData();
+    console.log("Form Data",this._userData);
+    this.form.controls['_firstName'].setValue(this._userData._firstName);
+    this.form.controls['_lastName'].setValue(this._userData._lastName);
+    this.form.controls['_contactNumber'].setValue(this._userData._contactNumber);
+    this.form.controls['_emailId'].setValue(this._userData._emailId);
+    this.form.controls['_dateOfBirth'].setValue(this._userData._dateOfBirth);
   }
   get formControl() {
     return this.form.controls;
-  }
+  } 
+  
   submit() {
      this._userservice.setFormData(this.form);
   }
-  public getUserName(_firstName: string, _lastName: string, _dateOfBirth: string, _contactNumber: number,
-    _emailId: string, _address: string) {
-    this._user._firstName = _firstName;
-    this._user._lastName = _lastName;
-    this._user._dateOfBirth = _dateOfBirth;
-    this._user._contactNumber = _contactNumber;
-    this._user._emailId = _emailId;
-    this._user._address = _address;
-
-  }
-
+ 
 
 }
